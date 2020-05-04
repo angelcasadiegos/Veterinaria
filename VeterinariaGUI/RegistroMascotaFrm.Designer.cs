@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroMascotaFrm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.CerrarBtn = new System.Windows.Forms.PictureBox();
+            this.MinimizarBtn = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,15 +50,12 @@
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.GuardarMascotaBtn = new System.Windows.Forms.Button();
-            this.MinimizarBtn = new System.Windows.Forms.PictureBox();
-            this.CerrarBtn = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,6 +70,37 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(358, 35);
             this.panel1.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(3, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(135, 14);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Registro de Mascotas";
+            // 
+            // CerrarBtn
+            // 
+            this.CerrarBtn.Image = ((System.Drawing.Image)(resources.GetObject("CerrarBtn.Image")));
+            this.CerrarBtn.Location = new System.Drawing.Point(330, 5);
+            this.CerrarBtn.Name = "CerrarBtn";
+            this.CerrarBtn.Size = new System.Drawing.Size(25, 25);
+            this.CerrarBtn.TabIndex = 5;
+            this.CerrarBtn.TabStop = false;
+            this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
+            // 
+            // MinimizarBtn
+            // 
+            this.MinimizarBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MinimizarBtn.Image = ((System.Drawing.Image)(resources.GetObject("MinimizarBtn.Image")));
+            this.MinimizarBtn.Location = new System.Drawing.Point(301, 5);
+            this.MinimizarBtn.Name = "MinimizarBtn";
+            this.MinimizarBtn.Size = new System.Drawing.Size(25, 25);
+            this.MinimizarBtn.TabIndex = 4;
+            this.MinimizarBtn.TabStop = false;
+            this.MinimizarBtn.Click += new System.EventHandler(this.MinimizarBtn_Click);
             // 
             // label1
             // 
@@ -229,25 +260,6 @@
             this.GuardarMascotaBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.GuardarMascotaBtn.UseVisualStyleBackColor = false;
             // 
-            // MinimizarBtn
-            // 
-            this.MinimizarBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.MinimizarBtn.Image = ((System.Drawing.Image)(resources.GetObject("MinimizarBtn.Image")));
-            this.MinimizarBtn.Location = new System.Drawing.Point(301, 5);
-            this.MinimizarBtn.Name = "MinimizarBtn";
-            this.MinimizarBtn.Size = new System.Drawing.Size(25, 25);
-            this.MinimizarBtn.TabIndex = 4;
-            this.MinimizarBtn.TabStop = false;
-            // 
-            // CerrarBtn
-            // 
-            this.CerrarBtn.Image = ((System.Drawing.Image)(resources.GetObject("CerrarBtn.Image")));
-            this.CerrarBtn.Location = new System.Drawing.Point(330, 5);
-            this.CerrarBtn.Name = "CerrarBtn";
-            this.CerrarBtn.Size = new System.Drawing.Size(25, 25);
-            this.CerrarBtn.TabIndex = 5;
-            this.CerrarBtn.TabStop = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DarkOrange;
@@ -280,16 +292,6 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(3, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(135, 14);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Registro de Mascotas";
-            // 
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
@@ -299,7 +301,7 @@
             this.panel2.Size = new System.Drawing.Size(119, 74);
             this.panel2.TabIndex = 21;
             // 
-            // CitasFrm
+            // RegistroMascotaFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -327,14 +329,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CitasFrm";
+            this.Name = "RegistroMascotaFrm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CitasFrm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

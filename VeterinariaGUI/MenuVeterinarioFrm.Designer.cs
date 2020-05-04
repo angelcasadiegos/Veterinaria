@@ -91,6 +91,7 @@
             this.CerrarBtn.Size = new System.Drawing.Size(25, 25);
             this.CerrarBtn.TabIndex = 7;
             this.CerrarBtn.TabStop = false;
+            this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
             // 
             // MinimizarBtn
             // 
@@ -101,6 +102,7 @@
             this.MinimizarBtn.Size = new System.Drawing.Size(25, 25);
             this.MinimizarBtn.TabIndex = 6;
             this.MinimizarBtn.TabStop = false;
+            this.MinimizarBtn.Click += new System.EventHandler(this.MinimizarBtn_Click);
             // 
             // VeterinarioCmb
             // 

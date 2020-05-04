@@ -16,5 +16,15 @@ namespace VeterinariaGUI
         {
             InitializeComponent();
         }
+
+        private void MinimizarBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void CerrarBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

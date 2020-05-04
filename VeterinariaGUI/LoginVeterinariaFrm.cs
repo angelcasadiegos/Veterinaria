@@ -25,7 +25,7 @@ namespace VeterinariaGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Principal principal = new Principal();
+            
 
         }
     }

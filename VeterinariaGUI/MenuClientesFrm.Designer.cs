@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuClientesFrm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.CerrarBtn = new System.Windows.Forms.PictureBox();
             this.MinimizarBtn = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -73,6 +73,16 @@
             this.panel1.Size = new System.Drawing.Size(1080, 35);
             this.panel1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 14);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Menu Clientes";
+            // 
             // CerrarBtn
             // 
             this.CerrarBtn.Image = ((System.Drawing.Image)(resources.GetObject("CerrarBtn.Image")));
@@ -81,6 +91,7 @@
             this.CerrarBtn.Size = new System.Drawing.Size(25, 25);
             this.CerrarBtn.TabIndex = 7;
             this.CerrarBtn.TabStop = false;
+            this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
             // 
             // MinimizarBtn
             // 
@@ -91,16 +102,7 @@
             this.MinimizarBtn.Size = new System.Drawing.Size(25, 25);
             this.MinimizarBtn.TabIndex = 6;
             this.MinimizarBtn.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 14);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Menu Clientes";
+            this.MinimizarBtn.Click += new System.EventHandler(this.MinimizarBtn_Click);
             // 
             // dataGridView1
             // 
@@ -123,26 +125,6 @@
             this.panel2.Size = new System.Drawing.Size(1080, 64);
             this.panel2.TabIndex = 2;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(5, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 27);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Clientes Activos";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Cedula"});
-            this.comboBox1.Location = new System.Drawing.Point(864, 23);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DarkOrange;
@@ -156,6 +138,26 @@
             this.button1.Text = "Buscar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Cedula"});
+            this.comboBox1.Location = new System.Drawing.Point(864, 23);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(5, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(192, 27);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Clientes Activos";
             // 
             // button2
             // 
