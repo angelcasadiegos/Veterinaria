@@ -40,7 +40,7 @@ namespace VeterinariaGUI
 
         private void CerrarBtn_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }
