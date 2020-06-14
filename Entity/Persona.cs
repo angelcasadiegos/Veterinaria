@@ -6,29 +6,30 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-     public abstract class Persona
-    {       
-        private string Cedula { get; set; }
-        private string Nombre { get; set; }
-        private string Apellido { get; set; }
-        private string Edad { get; set; }
-        private string Sexo { get; set; }
-        private string Telefono { get; set; }
-        private string Correo { get; set; }
+     public class Persona
+    {
+        public int Cedula { get; set; }
+        public string PrimerNombre { get; set; }
+        public string SegundoNombre { get; set; }
+        public string PrimerApellido { get; set; }
+        public string SegundoApellido { get; set; }
+        public string Telefono { get; set; }
+        public string Correo { get; set; }
 
-        
-
-        public Persona(string cedula, string nombre, string apellido, string edad, string sexo, string telefono, string correo)
+        public Persona(int cedula, string primerNombre, string segundoNombre, string primerApellido, string segundoApellido, string telefono, string correo)
         {
             Cedula = cedula;
-            Nombre = nombre;
-            Apellido = apellido;
-            Edad = edad;
-            Sexo = sexo;
+            PrimerNombre = primerNombre;
+            SegundoNombre = segundoNombre;
+            PrimerApellido = primerApellido;
+            SegundoApellido = segundoApellido;
             Telefono = telefono;
-            Correo = correo;            
+            Correo = correo;
+        }
 
-        }        
+        public Persona()
+        {
 
+        }
     }
 }

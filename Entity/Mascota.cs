@@ -8,36 +8,28 @@ namespace Entity
 {
     public class Mascota
     {
-        private int IdentificadorMascota { get; set; }
-        private Persona CedulaTercero{get;set;}
-        private string Nombre { get; set; }
-        private Color Color { get; set; }
-        private Raza Raza { get; set; }
-        private string Edad { get; set; }
-        private string Sexo { get; set; }
-        private float Peso { get; set; }
-        private Especie Especie { get; set; }
+        public int CodigoMascota { get; set; }
+        public string NombreMascota { get; set; }
+        public DateTime fechaNacimiento { get; set; }
+        public Raza laRaza { get; set; }
+        public Color UnColor { get; set; }
+        public Cliente Dueño { get; set; }        
+
+        public Mascota(int codigoMascota, string nombreMascota, DateTime fechaNacimiento, Raza laRaza, Color unColor, Cliente dueño)
+        {
+            CodigoMascota = codigoMascota;
+            NombreMascota = nombreMascota;
+            this.fechaNacimiento = fechaNacimiento;
+            this.laRaza = laRaza;
+            UnColor = unColor;
+            Dueño = dueño;
+            
+        }
 
         public Mascota()
         {
-
-        }
-
-        public Mascota(Persona cedulaTercero, string nombre, Color color, Raza raza, string edad, string sexo, float peso, Especie especie)
-        {
-            CedulaTercero = cedulaTercero;
-            Nombre = nombre;
-            Color = color;
-            Raza = raza;
-            Edad = edad;
-            Sexo = sexo;
-            Peso = peso;
-            Especie = especie;
-        }
-        
-        public void MuestraMascota()
-        {
-            Console.Write($"Datos de Mascota: {CedulaTercero};{Nombre};{Color};{Raza};{Edad};{Sexo};{Peso};{Especie};");
+            this.laRaza = new Raza();
+            this.Dueño = new Cliente();
         }
     }
 }

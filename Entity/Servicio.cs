@@ -6,27 +6,20 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    class Servicio
+    public class Servicio
     {
-        private int CodigodeServicio { get; set; }
-        private string NombreServicio { get; set; }
-        private decimal Valor { get; set; }
-
-        public CategoriadeServicio categoria;
-
+        public int CodigodeServicio { get; set; }
+        public string NombreServicio { get; set; }
+        public decimal ValorServicio { get; set; }        
         public Servicio()
         {
 
         }
-
-        public Servicio(int codigoservicio, string nombreservicio, decimal valor)
-        { 
-            CodigodeServicio = codigoservicio;
-            NombreServicio = nombreservicio;
-            Valor = valor;
-            
+        public Servicio(int codigodeServicio, string nombreServicio, decimal valorServicio)
+        {
+            CodigodeServicio = codigodeServicio;
+            NombreServicio = nombreServicio;
+            ValorServicio = valorServicio;
         }
-
-        
     }
 }

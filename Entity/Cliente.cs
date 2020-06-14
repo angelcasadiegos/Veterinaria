@@ -1,20 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Entity
 {
-    class Cliente : Persona
+    public class Cliente : Persona
     {
-        private Mascota Mascota;
+        public DateTime FechaRegistro { get; set; }        
+        public IList<Mascota> Mascotas { get; set; }
 
-        public Cliente(string cedula, string nombre, string apellido, string edad, string sexo, string telefono, string correo, Mascota mascota):base(cedula, nombre, apellido, edad, sexo, telefono, correo)
+        public Cliente()
         {
-            Mascota = mascota;
+
         }
 
-
+        public Cliente(DateTime fechaRegistro, IList<Mascota> mascotas, int cedula, string primerNombre, string segundoNombre, string primerApellido, string segundoApellido, string telefono, string correo)
+            :base(cedula, primerNombre, segundoNombre, primerApellido, segundoApellido, telefono, correo)
+        {
+            FechaRegistro = fechaRegistro;
+            Mascotas = mascotas;
+        }
     }
 }
