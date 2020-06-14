@@ -13,41 +13,27 @@ namespace Entity
         public Cliente UnCliente { get; set; }
         public Mascota UnaMascota { get; set; }
         public Empleado UnVeterinario { get; set; }
-        public DateTime Fecha { get; set; }
-        public DateTime Hora { get; set; }        
-        public string diagnostico { get; set;}
-        public Servicio Servicio { get; set; }    
-        public decimal Valortotal { get; set; }
-
-        public RegistroServicio(int codigoRegistro, Cliente unCliente, Mascota unaMascota, Empleado unVeterinario, DateTime fecha, DateTime hora, string diagnostico, Servicio servicio, decimal valortotal)
-        {
-            CodigoRegistro = codigoRegistro;
-            UnCliente = unCliente;
-            UnaMascota = unaMascota;
-            UnVeterinario = unVeterinario;
-            Fecha = fecha;
-            Hora = hora;
-            this.diagnostico = diagnostico;
-            Servicio = servicio;
-            Valortotal = valortotal;
-        }
+        public DateTime Fecha { get; set; }                
+        public IList<Servicio> Servicios { get; set; }  
+        public int NServicios { get { return this.Servicios.Count; } }
+        public double SubTotal { get { return this.Servicios.Sum(x => x.ValorServicio); } }
+        public double Total { get { return this.SubTotal; } }
 
         public RegistroServicio()
         {
-            this.UnaMascota = new Mascota();
-            this.UnCliente = new Cliente();
-            this.UnVeterinario = new Empleado();
+            Servicios = new List<Servicio>();
         }
 
-        public decimal CalculoValorServicio(Servicio ValorServicio, Mascota PorcentajeTarifa )
+        public RegistroServicio(Cliente unCliente, Empleado unVeterinario, IList<Servicio> servicios)
         {
-            Valortotal = Servicio.ValorServicio * Convert.ToDecimal(UnaMascota.laRaza.tipoMascota.PorcentajeTarifa);
-
-            return Valortotal;
+            UnCliente = unCliente;
+            UnVeterinario = unVeterinario;
+            Servicios = servicios;
         }
 
-
-
-        
+        public override string ToString()
+        {
+            return $"Cliente: {UnCliente.NombreCompleto()}\nEmpleado: {UnVeterinario.NombreCompleto()}\nServicios: {NServicios}\nSubTotal: {SubTotal}\nTotal: {Total}";
+        }
     }
 }

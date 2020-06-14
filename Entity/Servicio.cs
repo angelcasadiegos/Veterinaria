@@ -10,7 +10,7 @@ namespace Entity
     {
         public int CodigodeServicio { get; set; }
         public string NombreServicio { get; set; }
-        public decimal ValorServicio { get; set; }        
+        public double ValorServicio { get; set; }        
         public Servicio()
         {
 

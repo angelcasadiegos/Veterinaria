@@ -10,26 +10,29 @@ namespace Entity
     {
         public int CodigoMascota { get; set; }
         public string NombreMascota { get; set; }
-        public DateTime fechaNacimiento { get; set; }
+        public DateTime FechaNacimiento { get; set; }
         public Raza laRaza { get; set; }
         public Color UnColor { get; set; }
-        public Cliente Dueño { get; set; }        
+        public Cliente Cedula { get; set; }  
+        public int Edad { get; set; }
+        public int Sexo { get; set; }
 
-        public Mascota(int codigoMascota, string nombreMascota, DateTime fechaNacimiento, Raza laRaza, Color unColor, Cliente dueño)
+        public Mascota(int codigoMascota, string nombreMascota, DateTime fechaNacimiento, Raza laRaza, Color unColor, Cliente cedula, int edad, int sexo)
         {
             CodigoMascota = codigoMascota;
             NombreMascota = nombreMascota;
-            this.fechaNacimiento = fechaNacimiento;
+            FechaNacimiento = fechaNacimiento;
             this.laRaza = laRaza;
             UnColor = unColor;
-            Dueño = dueño;
-            
+            Cedula = cedula;
+            Edad = edad;
+            Sexo = sexo;
         }
 
         public Mascota()
         {
             this.laRaza = new Raza();
-            this.Dueño = new Cliente();
+            this.Cedula = new Cliente();
         }
     }
 }

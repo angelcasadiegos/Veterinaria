@@ -8,22 +8,18 @@ namespace Entity
 {
     public class Raza
     {
-        public int CodigoRaza { get; set; }
-        public TipoMascota tipoMascota { get; set; }
-        public string laRaza { get; set; }
-
-        public Raza(TipoMascota tipoMascota, string laRaza)
-        {
-            this.tipoMascota = tipoMascota;
-            this.laRaza = laRaza;
-        }
+        public int CodigoRaza { get; set; }        
+        public string NombreRaza { get; set; }
 
         public Raza()
         {
-            this.tipoMascota = new TipoMascota();
+        
         }
-        
 
-        
+        public Raza(int codigoRaza, string nombreRaza)
+        {
+            CodigoRaza = codigoRaza;
+            NombreRaza = nombreRaza;
+        }
     }
 }

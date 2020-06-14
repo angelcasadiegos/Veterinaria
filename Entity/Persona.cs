@@ -31,5 +31,10 @@ namespace Entity
         {
 
         }
+
+        public string NombreCompleto()
+        {
+            return this.PrimerNombre + " " + this.SegundoNombre + " " + this.PrimerApellido + " " + this.SegundoApellido;
+        }
     }
 }
