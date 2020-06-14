@@ -16,8 +16,8 @@ namespace Entity
         public DateTime Fecha { get; set; }                
         public IList<Servicio> Servicios { get; set; }  
         public int NServicios { get { return this.Servicios.Count; } }
-        public double SubTotal { get { return this.Servicios.Sum(x => x.ValorServicio); } }
-        public double Total { get { return this.SubTotal; } }
+        public decimal SubTotal { get { return this.Servicios.Sum(x => x.ValorServicio); } }
+        public decimal Total { get { return this.SubTotal; } }
 
         public RegistroServicio()
         {

@@ -8,24 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace VeterinariaGUI
 {
-    public partial class LoginVeterinariaFrm : Form
+    public partial class RegistrarServiciosFrm : Form
     {
-        public LoginVeterinariaFrm()
+        public RegistrarServiciosFrm()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void MinimizarBtn_Click(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CerrarBtn_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
     }
 }

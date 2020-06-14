@@ -15,9 +15,10 @@ namespace Entity
         public Color UnColor { get; set; }
         public Cliente Cedula { get; set; }  
         public int Edad { get; set; }
-        public int Sexo { get; set; }
+        public string Sexo { get; set; }
+        public TipoMascota tipoMascota { get; set; }
 
-        public Mascota(int codigoMascota, string nombreMascota, DateTime fechaNacimiento, Raza laRaza, Color unColor, Cliente cedula, int edad, int sexo)
+        public Mascota(int codigoMascota, string nombreMascota, DateTime fechaNacimiento, Raza laRaza, Color unColor, Cliente cedula, int edad, string sexo, TipoMascota tipoMascota)
         {
             CodigoMascota = codigoMascota;
             NombreMascota = nombreMascota;
@@ -27,6 +28,7 @@ namespace Entity
             Cedula = cedula;
             Edad = edad;
             Sexo = sexo;
+            this.tipoMascota = tipoMascota;
         }
 
         public Mascota()

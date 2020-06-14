@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,12 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginVeterinariaFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginVeterinariaFrm.Designer.cs">
-      <DependentUpon>LoginVeterinariaFrm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="ConfigConection.cs" />
     <Compile Include="MenuMascotasFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,11 +98,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistrarCitasFrm.cs">
+    <Compile Include="RegistrarServiciosFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistrarCitasFrm.Designer.cs">
-      <DependentUpon>RegistrarCitasFrm.cs</DependentUpon>
+    <Compile Include="RegistrarServiciosFrm.Designer.cs">
+      <DependentUpon>RegistrarServiciosFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistroClienteFrm.cs">
       <SubType>Form</SubType>
@@ -114,9 +110,6 @@
     <Compile Include="RegistroClienteFrm.Designer.cs">
       <DependentUpon>RegistroClienteFrm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="LoginVeterinariaFrm.resx">
-      <DependentUpon>LoginVeterinariaFrm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MenuMascotasFrm.resx">
       <DependentUpon>MenuMascotasFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,8 +143,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RegistrarCitasFrm.resx">
-      <DependentUpon>RegistrarCitasFrm.cs</DependentUpon>
+    <EmbeddedResource Include="RegistrarServiciosFrm.resx">
+      <DependentUpon>RegistrarServiciosFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroClienteFrm.resx">
       <DependentUpon>RegistroClienteFrm.cs</DependentUpon>

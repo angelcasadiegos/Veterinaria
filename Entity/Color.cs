@@ -22,6 +22,7 @@ namespace Entity
             NombreColor = nombreColor;
         }
 
+
         
 
     }

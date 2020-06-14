@@ -40,7 +40,7 @@ namespace VeterinariaGUI
 
         private void CitasBtn_Click(object sender, EventArgs e)
         {
-            RegistrarCitasFrm registrarCitasFrm = new RegistrarCitasFrm();
+            RegistrarServiciosFrm registrarCitasFrm = new RegistrarServiciosFrm();
             registrarCitasFrm.Show();
         }
 
